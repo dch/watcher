@@ -4,62 +4,8 @@ const pkg = require('../package.json');
 const dir = `${__dirname}/..`;
 const triples = [
   {
-    platform: 'darwin',
-    arch: 'x64'
-  },
-  {
-    platform: 'darwin',
-    arch: 'arm64'
-  },
-  {
-    platform: 'win32',
-    arch: 'x64'
-  },
-  {
-    platform: 'win32',
-    arch: 'arm64'
-  },
-  {
-    platform: 'win32',
-    arch: 'ia32'
-  },
-  {
-    platform: 'linux',
-    arch: 'x64',
-    libc: 'glibc'
-  },
-  {
-    platform: 'linux',
-    arch: 'x64',
-    libc: 'musl'
-  },
-  {
-    platform: 'linux',
-    arch: 'arm64',
-    libc: 'glibc'
-  },
-  {
-    platform: 'linux',
-    arch: 'arm64',
-    libc: 'musl'
-  },
-  {
-    platform: 'linux',
-    arch: 'arm',
-    libc: 'glibc'
-  },
-  {
-    platform: 'linux',
-    arch: 'arm',
-    libc: 'musl'
-  },
-  {
-    platform: 'android',
-    arch: 'arm64'
-  },
-  {
     platform: 'freebsd',
-    arch: 'x64'
+    arch: 'arm64'
   }
 ];
 

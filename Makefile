@@ -35,4 +35,15 @@ build/Debug/watcher.wasm: build/node-$(NODE_VERSION) $(SRC)
 wasm: build/Release/watcher.wasm
 wasm-debug: build/Debug/watcher.wasm
 
+freebsd-arm64: npm/watcher/parcel-watcher-2.5.1.tgz
+
+npm/freebsd-arm64/watcher.node:
+	mkdir -p npm/freebsd-arm64 prebuilds/freebsd-arm64
+	npm install --build-from-source
+
+npm/watcher/parcel-watcher-2.5.1.tgz: npm/freebsd-arm64/watcher.node
+	cp ./build/Release/watcher.node prebuilds/freebsd-arm64/@parcel+watcher.glibc.node
+	node scripts/build-npm.js
+	(cd npm/watcher && npm pack)
+
 .PHONY: wasm wasm-debug
