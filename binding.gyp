@@ -4,7 +4,7 @@
       "target_name": "watcher",
       "defines": [ "NAPI_DISABLE_CPP_EXCEPTIONS" ],
       "sources": [ "src/binding.cc", "src/Watcher.cc", "src/Backend.cc", "src/DirTree.cc", "src/Glob.cc", "src/Debounce.cc" ],
-      "include_dirs" : ["<!(node -p \"require('node-addon-api').include_dir\")"],
+      "include_dirs" : ["/usr/local/include/node"],
       'cflags!': [ '-fno-exceptions', '-std=c++17' ],
       'cflags_cc!': [ '-fno-exceptions', '-std=c++17' ],
       "conditions": [
